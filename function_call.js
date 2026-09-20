@@ -12,9 +12,10 @@ const history = [
   {
     role: "user",
     content:
-      "現在幾點？我在台北車站附近，請問現在天氣如何？順便告訴我附近還有沒有 YouBike 可以租？",
+      "現在幾點？台中天氣好嗎？",
   },
 ];
+console.log("輸入：" + history[0].content);
 
 let completed = false;
 
