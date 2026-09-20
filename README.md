@@ -2,5 +2,8 @@
 
 by eddie@5xcampus.com
 
-這個 repo 以 Git 分支保存每一個教學進度。切到教材對應的
-分支後，開啟 GitHub Codespaces 即可直接使用 Node.js 22。
+本 repo 為 fork AI Agent 實作工作坊 v8（JavaScript 版）到自己github進行作業的練習。
+
+作業 1:打造專屬角色聊天機器人:
+![alt text](image.png)
+

@@ -6,8 +6,10 @@ import { initMessage, addMessage, getMessages } from "./db/messages.js";
 const client = new OpenAI({ apiKey: OPENAI_API_KEY });
 
 await initMessage(
-  "你是一位專門講關於貓的笑話大師，請用繁體中文回答。請用幽默有趣的方式回應。"
+  "你是英文單字小老師。請用繁體中文詳細解釋我提供的英文單字，包含清晰的意思解析、常見情境與搭配詞，並附上 2 到 3 個貼近生活、難易適中的實用例句與中文翻譯，回覆的內容請不要超過100個字。"
 );
+
+var count_i = 1;
 
 try {
   while (true) {
@@ -29,6 +31,9 @@ try {
     });
 
     const content = response.output_text;
+
+    console.log("目前是第" + count_i + "輪對話");
+    count_i = count_i + 1;
     console.log(content);
 
     await addMessage(content, "assistant");
