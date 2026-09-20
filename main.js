@@ -57,6 +57,15 @@ const pythonTeacher = new Agent({
   tools: [toAgentTool(pythonBookTool)],
 });
 
+const SQLTeacher = new Agent({
+  name: "SQL 老師",
+  model: MODEL,
+  modelSettings: MODEL_SETTINGS,
+  instructions:
+    "你是 SQL 老師，專門回答SQL相關技術問題，請用繁體中文回答相關問題。",
+  handoffDescription: "SQL 相關問題",
+});
+
 const homeroom = Agent.create({
   name: "班導師",
   model: MODEL,
@@ -71,7 +80,7 @@ const homeroom = Agent.create({
     toAgentTool(youbikeTool),
     toAgentTool(netflixTool),
   ],
-  handoffs: [phpTeacher, vueTeacher, pythonTeacher],
+  handoffs: [phpTeacher, vueTeacher, pythonTeacher,SQLTeacher],
   mcpServers: [tenlongMcp],
 });
 
